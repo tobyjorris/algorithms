@@ -1,4 +1,5 @@
 //Hamming Distance - return a numerical 'distance' between two strings
+
 const hammingDistance = (string1, string2) => {
     const string1Array = string1.split('')
     const string2Array = string2.split('')
@@ -13,4 +14,4 @@ const hammingDistance = (string1, string2) => {
     return count
 }
 
-hammingDistance('karolin', 'kathrin')
+module.exports = hammingDistance
