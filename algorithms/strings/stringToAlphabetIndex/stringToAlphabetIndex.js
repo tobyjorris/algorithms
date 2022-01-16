@@ -2,9 +2,6 @@
 //
 // If anything in the string isn't a letter, ignore it and don't return it.
 
-const string = 'The Quick Brown Fox'
-
-
 const stringToAlphabetIndex = sentence => {
     const alphabet = ['', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
     const sentenceArray = sentence.toLowerCase().split(' ')
@@ -24,5 +21,14 @@ const stringToAlphabetIndex = sentence => {
 
     return characterIndex.join(' ')
 }
+
+//Alternative using regex:
+// const stringToAlphabet = string => {
+//     return string
+//         .toUpperCase()
+//         .match(/[a-z]/gi)
+//         .map(character => character.charCodeAt() - 64)
+//         .join(' ')
+// }
 
 module.exports = stringToAlphabetIndex
