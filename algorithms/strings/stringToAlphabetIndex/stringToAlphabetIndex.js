@@ -7,24 +7,21 @@ const stringToAlphabetIndex = sentence => {
     const sentenceArray = sentence.toLowerCase().split(' ')
     const characterIndex = []
 
-    sentenceArray
-        .map(word => {
-
-            for (let character of word.split('')) {
-                alphabet.forEach((alphChar, index) => {
-                    if (alphChar === character) {
-                        characterIndex.push(index)
-                    }
-                })
-            }
-        })
-
+    sentenceArray.forEach(word => {
+        for (let character of word.split('')) {
+            alphabet.forEach((alphChar, index) => {
+                if (alphChar === character) {
+                    characterIndex.push(index)
+                }
+            })
+        }
+    })
     return characterIndex.join(' ')
 }
 
 //Alternative using regex & character codes:
-// const stringToAlphabet = string => {
-//     return string
+// const stringToAlphabetIndex = sentence => {
+//     return sentence
 //         .toUpperCase()
 //         .match(/[a-z]/gi)
 //         .map(character => character.charCodeAt() - 64)
