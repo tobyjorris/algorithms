@@ -22,7 +22,7 @@ const stringToAlphabetIndex = sentence => {
     return characterIndex.join(' ')
 }
 
-//Alternative using regex:
+//Alternative using regex & character codes:
 // const stringToAlphabet = string => {
 //     return string
 //         .toUpperCase()
